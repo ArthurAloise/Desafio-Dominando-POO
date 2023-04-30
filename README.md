@@ -148,4 +148,4 @@ Se possível:<br>
 
 ------------
 
-Disponibilizado por [ArthurAloise](https://www.linkedin.com/in/ArthurAloise/ "ArthurAloise").
+Disponibilizado por [ArthurAloise](https://www.linkedin.com/in/arthur-loureiro-aloise-6b58b1188/ "ArthurAloise").
