@@ -1,4 +1,9 @@
-package br.com.POO.desafio.dominio;
+package br.com.POO.desafio;
+
+import br.com.POO.desafio.dominio.Bootcamp;
+import br.com.POO.desafio.dominio.Curso;
+import br.com.POO.desafio.dominio.Dev;
+import br.com.POO.desafio.dominio.Mentoria;
 
 import java.time.LocalDate;
 
@@ -10,14 +15,30 @@ public class Main {
         curso.setDescricao("Cuso completo");
         curso.setCargaHoraria(8);
 
-        System.out.println(curso);
-
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("Duvidas Java");
         mentoria.setDescricao("Dúvidas com POO");
         mentoria.setData(LocalDate.now());
 
-        System.out.println(mentoria);
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Kotlin Plus Java");
+        bootcamp.setDescricao("Upgrade de carreira com Java Development");
+        bootcamp.getConteudos().add(curso);
+        bootcamp.getConteudos().add(mentoria);
+
+        Dev devArthur = new Dev();
+        devArthur.setName("Arthur Aloise");
+        devArthur.inscreverBootcamp(bootcamp);
+        System.out.println("Conteudos incritos: \n" + devArthur.getConteudosInscritos());
+
+        devArthur.progredir();
+        devArthur.progredir();
+
+        System.out.println("Conteudos concluidos: \n" + devArthur.getConteudosConcluidos());
+
+        System.out.println("Conteudos incritos: \n" + devArthur.getConteudosInscritos());
+
+        System.out.println("XP: " + devArthur.calcularValorXP());
 
     }
 }
