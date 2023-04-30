@@ -1,4 +1,7 @@
-package br.com.POO.desafio.dominio;
+package br.com.POO.desafio;
+
+import br.com.POO.desafio.dominio.Curso;
+import br.com.POO.desafio.dominio.Mentoria;
 
 import java.time.LocalDate;
 
