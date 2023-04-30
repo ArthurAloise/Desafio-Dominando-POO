@@ -26,7 +26,7 @@ public class Dev {
     public Double calcularValorXP(){
         return this.consteudosConcluidos
                 .stream()
-                .mapToDouble(conteudo -> conteudo.calcularXP())
+                .mapToDouble(Conteudo::calcularXP)
                 .sum();
     }
 
@@ -44,9 +44,9 @@ public class Dev {
         return conteudosInscritos;
     }
 
-    public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
-        this.conteudosInscritos = conteudosInscritos;
-    }
+//    public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
+//        this.conteudosInscritos = conteudosInscritos;
+//    }
 
     public Set<Conteudo> getConteudosConcluidos() {
         return consteudosConcluidos;
@@ -64,5 +64,7 @@ public class Dev {
     public int hashCode() {
         return Objects.hash(name, conteudosInscritos, consteudosConcluidos);
     }
+
+
 }
 
